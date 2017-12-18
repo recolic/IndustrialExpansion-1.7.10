@@ -174,7 +174,8 @@ public class QuantumArmor  extends ItemArmorAdv implements ISpecialArmor, IEnerg
         if(world.isRemote) return;
         if (getEnergyStored(armor) >= getEnergyPerDamage(armor)) {
             if (armor.getItem() == ItemManager.itemLegsQuantum) {
-                player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 260, 4, true));
+                //Recolic: this effect made a distortion to screen. Speed IV -> Speed I/II so it works well.
+                player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 260, 2, true));
             }
             if (armor.getItem() == ItemManager.itemPlateQuantum) {
                 player.addPotionEffect(new PotionEffect(Potion.field_76443_y.id, 260, 4, true));
